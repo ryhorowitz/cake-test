@@ -110,4 +110,9 @@ class BookmarksController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function tags() {
+        //getting all passed parameters
+        $tags = $this->request->params['pass'];
+    }
 }
