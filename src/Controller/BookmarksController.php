@@ -114,5 +114,18 @@ class BookmarksController extends AppController
     public function tags() {
         //getting all passed parameters
         $tags = $this->request->params['pass'];
+
+        $bookmarks = $this->Bookmarks->find('tagged', [
+            'tags' => $tags
+        ]);
+
+        //Pass into view
+        $this->set([
+            'bookmarks' => $bookmarks,
+            'tags' => $tags
+        ]);
+
+        die('test');
+
     }
 }
