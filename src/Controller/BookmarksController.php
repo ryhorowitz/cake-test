@@ -125,7 +125,6 @@ class BookmarksController extends AppController
             'tags' => $tags
         ]);
 
-        die('test');
 
     }
 }
